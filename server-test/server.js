@@ -20,8 +20,6 @@ app.use(bodyParser.json())
 
 app.use(express.json())
 
-// var json_data = {'username_0': 'value test 0 0'}
-// var count = 1
 var table_values = {
         'title': 'Resumen del año',
         'table': {
@@ -34,19 +32,6 @@ var table_values = {
         }
       }
 
-// app.get('/get_json', function (req, res) {
-//   res.json(json_data);
-//   // console.log('json sended: ' + JSON.stringify(json_data));
-//   console.log('json sended');
-// });
-
-// app.get('/json_insert', function (req, res) {
-//   json_data['username_'+ count] = 'value test ' + count + ' ' + count;
-//   count++;
-//   res.send('ok');
-//   console.log('json_data and count changed');
-// });
-
 app.get('/get_table_values', function (req, res) {
   res.json(table_values);
   console.log('table_values sended');
@@ -55,7 +40,6 @@ app.get('/get_table_values', function (req, res) {
 app.post('/set_table_values', function (req, res) {
   res.send('ok');
   table_values.table.rows.push([req.body.month, req.body.value])
-  // console.log(res);
 });
 
 
@@ -67,17 +51,3 @@ app.listen(8000, function () {
   console.log('http://localhost:8000/get_table_values');
   console.log('http://localhost:8000/set_table_values');
 });
-
-
-// var xmlhttp = new XMLHttpRequest()
-// var url = 'http://localhost:8000/get_json'
-
-// xmlhttp.onreadystatechange = function() {
-// 	if (this.readyState == 4 && this.status == 200) {
-// 		console.log(this.responseText)
-// 		// var myArr = JSON.parse(this.responseText)
-// 		// tratamiento(myArr)
-// 	}
-// }
-// xmlhttp.open('GET', url, true)
-// xmlhttp.send()
