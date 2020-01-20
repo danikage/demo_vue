@@ -1,0 +1,13 @@
+div.v-sample-form
+	p Ejemplo de form
+	form
+		div
+			label Mes
+				input(type="text"  v-model="month")
+		div
+			label Valor
+				input(type="number"  v-model="value")
+		button(@click="sendValues") Enviar
+	div.v-sample-form__result(v-if="insert_state")
+		p se ha insertado con éxito ( {{ month }} , {{ value }} )
+		router-link(to="/table") ver los resultados

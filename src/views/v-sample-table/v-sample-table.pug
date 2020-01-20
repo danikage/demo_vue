@@ -1,0 +1,5 @@
+div.v-sample-table
+	p Tabla cargada desde el servidor
+	p(v-if="loading.state && !loading.error") {{ loading.text }}
+	p(v-else-if="loading.error") {{ loading.text_error }}
+	CTable(v-else v-bind="data_table")

@@ -1,0 +1,73 @@
+// Reset
+*,
+*::before,
+*::after
+  box-sizing border-box
+
+html
+  line-height 1.15
+  margin 0
+  padding 0
+  height 100%
+  width 100%
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section
+  display block
+
+body
+  background-color #f0ffff
+  font-size 16px
+  margin 0
+  padding 0
+  height 100%
+  width 100%
+
+h1, h2, h3, h4, h5, h6
+  margin-top 0
+  margin-bottom 1em
+
+header, footer
+  font-size 2em
+
+p
+  font-size 1.6rem
+  margin 0 0 .8rem 0
+  padding 0
+
+div
+  margin 0
+  padding 0
+
+ol, ul
+  margin 0
+
+button
+  border-radius 0
+
+// Normalize
+
+#app
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  text-align center
+  color #2c3e50
+h1, h2
+  font-weight normal
+  font-size 2em
+ul
+  list-style-type none
+  padding 0
+li
+  display inline-block
+  margin 0 10px
+a
+  color #42b983
+.app
+  display flex
+  height 100%
+  width	100%
+  .c-main-nav
+  	flex 0 0 14em
+  &__content
+  	flex 1 1 auto

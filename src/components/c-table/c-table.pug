@@ -1,0 +1,10 @@
+div.c-table
+	p.c-table__title {{ title }}
+	table.c-table__table(v-if="table.rows.length > 0")
+		tr.c-table__row
+			th.c-table__heading(v-for="text in table.heads")
+				| {{ text }}
+		tr.c-table__row(v-for="row in table.rows")
+			td.c-table__cell(v-for="text in row")
+				| {{ text }}
+	p(v-else) {{ empty_text }}
