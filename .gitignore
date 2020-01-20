@@ -3,6 +3,9 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
+nodecmd.bat
+server-test/nodecmd.bat
+package-lock.json
 
 # Editor directories and files
 .idea
